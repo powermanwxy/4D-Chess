@@ -1,5 +1,6 @@
 # 4D-Chess
  A c++ and irrlicht engine implment 4D chess game.
+![Demo](https://github.com/powermanwxy/4D-Chess/docs/demo.jpg)
 
 ## How to use
 
@@ -12,3 +13,4 @@
 
 ## Licence
  This software is following **MIT Licence**, for study propose only!
+![Demo2](https://github.com/powermanwxy/4D-Chess/docs/demo2.jpg)
