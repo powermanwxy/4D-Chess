@@ -1,0 +1,326 @@
+\hypertarget{class_chess_board}{}\section{Chess\+Board Class Reference}
+\label{class_chess_board}\index{Chess\+Board@{Chess\+Board}}
+
+
+Logic class.  
+
+
+
+
+{\ttfamily \#include $<$chessboard.\+h$>$}
+
+Inheritance diagram for Chess\+Board\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_chess_board}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_chess_board_aaf5e38879e16f626b94f42cb2cb2a9f2}{Chess\+Board} (Q\+Object $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Create instance. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_chess_board_a266c0a96414a8f1605f40288a81cda60}\label{class_chess_board_a266c0a96414a8f1605f40288a81cda60}} 
+void \hyperlink{class_chess_board_a266c0a96414a8f1605f40288a81cda60}{init} ()
+\begin{DoxyCompactList}\small\item\em Init and clear borad. \end{DoxyCompactList}\item 
+bool \hyperlink{class_chess_board_afe130ad0f67ced921f9dacf14176cb78}{insert\+Pices} (int x, int y, int type)
+\begin{DoxyCompactList}\small\item\em Insert a pices. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_chess_board_abe62b2f62c6179fb77c81b84fc17dba2}\label{class_chess_board_abe62b2f62c6179fb77c81b84fc17dba2}} 
+void \hyperlink{class_chess_board_abe62b2f62c6179fb77c81b84fc17dba2}{print\+Board} ()
+\begin{DoxyCompactList}\small\item\em Print the chess board status. \end{DoxyCompactList}\item 
+Pices\+Pos\+List \hyperlink{class_chess_board_a385358d9aa201c8043e25aecd7dc93eb}{get\+Available\+Pos} (int board\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}, chess\+Pices\+Status side)
+\begin{DoxyCompactList}\small\item\em Return a list of avliable pos, including pos and score. \end{DoxyCompactList}\item 
+int \hyperlink{class_chess_board_a8208e18ec3b29a039ffe45249d4d9e53}{get\+Pos\+Value} (int board\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}, \hyperlink{struct_pices_pos}{Pices\+Pos} $\ast$pos, chess\+Pices\+Status side)
+\begin{DoxyCompactList}\small\item\em Return position\textquotesingle{}s value. \end{DoxyCompactList}\item 
+int \hyperlink{class_chess_board_a45115518c4f03974c31eb944ac6fa521}{get\+Flat\+Pices\+Value} (Pices\+Flat\+Data\+List flats, chess\+Pices\+Status status)
+\begin{DoxyCompactList}\small\item\em Return group(flat data)\textquotesingle{}s value. \end{DoxyCompactList}\item 
+int \hyperlink{class_chess_board_aae32c08142508998bedeb0907f35e62f}{get\+Side\+Score} (int board\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}, chess\+Pices\+Status side)
+\begin{DoxyCompactList}\small\item\em Return side\textquotesingle{}s globe score. \end{DoxyCompactList}\item 
+int \hyperlink{class_chess_board_a3195308e0aecff2ad8b044b7118a5a4c}{dfs} (int board\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}, int deep=6)
+\begin{DoxyCompactList}\small\item\em Main search pridect function. \end{DoxyCompactList}\item 
+int \hyperlink{class_chess_board_af1577bee7c63bad019fdda023041ad96}{find\+White\+Score\+Max\+Value} (int board\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}, int deep, int alpha, int beta)
+\begin{DoxyCompactList}\small\item\em Search white pices\textquotesingle{} best steps. \end{DoxyCompactList}\item 
+int \hyperlink{class_chess_board_ac23dc6b8a273c3e1fafb78d98e5e67d0}{find\+White\+Score\+Min\+Value} (int board\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}, int deep, int alpha, int beta)
+\begin{DoxyCompactList}\small\item\em Search black pices\textquotesingle{} best steps. \end{DoxyCompactList}\item 
+int \hyperlink{class_chess_board_abf92d3ef0baf837f8a15b8746d4e44cc}{is\+Win} (int board\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}\mbox{[}4\mbox{]})
+\begin{DoxyCompactList}\small\item\em Return is anyone win. \end{DoxyCompactList}\item 
+Pices\+Pos\+List \hyperlink{class_chess_board_ae623e32e472e4bb21198707b9b22213f}{takeback} (int board\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}, int step)
+\begin{DoxyCompactList}\small\item\em Take back. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_chess_board_ab58be444056dbb531b3b2535b4054b54}{chess\+Board} \mbox{[}4\mbox{]}\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}
+\item 
+\hyperlink{struct_pices_pos}{Pices\+Pos} \hyperlink{class_chess_board_aa03bcc987457e608a908809663085302}{white\+Target\+Pos}
+\item 
+\hyperlink{struct_pices_pos}{Pices\+Pos} \hyperlink{class_chess_board_a5d8e4b1cbd87ef1dd7bac6de42e375ff}{black\+Target\+Pos}
+\item 
+\hyperlink{struct_pices_pos}{Pices\+Pos} \hyperlink{class_chess_board_af130ebe77300106c1a79a8fd54600cd2}{target\+Pos}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Logic class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_chess_board_aaf5e38879e16f626b94f42cb2cb2a9f2}\label{class_chess_board_aaf5e38879e16f626b94f42cb2cb2a9f2}} 
+\index{Chess\+Board@{Chess\+Board}!Chess\+Board@{Chess\+Board}}
+\index{Chess\+Board@{Chess\+Board}!Chess\+Board@{Chess\+Board}}
+\subsubsection{\texorpdfstring{Chess\+Board()}{ChessBoard()}}
+{\footnotesize\ttfamily Chess\+Board\+::\+Chess\+Board (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Create instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_chess_board_a3195308e0aecff2ad8b044b7118a5a4c}\label{class_chess_board_a3195308e0aecff2ad8b044b7118a5a4c}} 
+\index{Chess\+Board@{Chess\+Board}!dfs@{dfs}}
+\index{dfs@{dfs}!Chess\+Board@{Chess\+Board}}
+\subsubsection{\texorpdfstring{dfs()}{dfs()}}
+{\footnotesize\ttfamily int Chess\+Board\+::dfs (\begin{DoxyParamCaption}\item[{int}]{board\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}\mbox{[}4\mbox{]},  }\item[{int}]{deep = {\ttfamily 6} }\end{DoxyParamCaption})}
+
+
+
+Main search pridect function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}} & \\
+\hline
+{\em deep} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_chess_board_af1577bee7c63bad019fdda023041ad96}\label{class_chess_board_af1577bee7c63bad019fdda023041ad96}} 
+\index{Chess\+Board@{Chess\+Board}!find\+White\+Score\+Max\+Value@{find\+White\+Score\+Max\+Value}}
+\index{find\+White\+Score\+Max\+Value@{find\+White\+Score\+Max\+Value}!Chess\+Board@{Chess\+Board}}
+\subsubsection{\texorpdfstring{find\+White\+Score\+Max\+Value()}{findWhiteScoreMaxValue()}}
+{\footnotesize\ttfamily int Chess\+Board\+::find\+White\+Score\+Max\+Value (\begin{DoxyParamCaption}\item[{int}]{board\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}\mbox{[}4\mbox{]},  }\item[{int}]{deep,  }\item[{int}]{alpha,  }\item[{int}]{beta }\end{DoxyParamCaption})}
+
+
+
+Search white pices\textquotesingle{} best steps. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}} & \\
+\hline
+{\em deep} & \\
+\hline
+{\em alpha} & \\
+\hline
+{\em beta} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_chess_board_ac23dc6b8a273c3e1fafb78d98e5e67d0}\label{class_chess_board_ac23dc6b8a273c3e1fafb78d98e5e67d0}} 
+\index{Chess\+Board@{Chess\+Board}!find\+White\+Score\+Min\+Value@{find\+White\+Score\+Min\+Value}}
+\index{find\+White\+Score\+Min\+Value@{find\+White\+Score\+Min\+Value}!Chess\+Board@{Chess\+Board}}
+\subsubsection{\texorpdfstring{find\+White\+Score\+Min\+Value()}{findWhiteScoreMinValue()}}
+{\footnotesize\ttfamily int Chess\+Board\+::find\+White\+Score\+Min\+Value (\begin{DoxyParamCaption}\item[{int}]{board\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}\mbox{[}4\mbox{]},  }\item[{int}]{deep,  }\item[{int}]{alpha,  }\item[{int}]{beta }\end{DoxyParamCaption})}
+
+
+
+Search black pices\textquotesingle{} best steps. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}} & \\
+\hline
+{\em deep} & \\
+\hline
+{\em alpha} & \\
+\hline
+{\em beta} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_chess_board_a385358d9aa201c8043e25aecd7dc93eb}\label{class_chess_board_a385358d9aa201c8043e25aecd7dc93eb}} 
+\index{Chess\+Board@{Chess\+Board}!get\+Available\+Pos@{get\+Available\+Pos}}
+\index{get\+Available\+Pos@{get\+Available\+Pos}!Chess\+Board@{Chess\+Board}}
+\subsubsection{\texorpdfstring{get\+Available\+Pos()}{getAvailablePos()}}
+{\footnotesize\ttfamily Pices\+Pos\+List Chess\+Board\+::get\+Available\+Pos (\begin{DoxyParamCaption}\item[{int}]{board\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}\mbox{[}4\mbox{]},  }\item[{chess\+Pices\+Status}]{side }\end{DoxyParamCaption})}
+
+
+
+Return a list of avliable pos, including pos and score. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}} & \\
+\hline
+{\em side} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pices\+Pos\+List 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_chess_board_a45115518c4f03974c31eb944ac6fa521}\label{class_chess_board_a45115518c4f03974c31eb944ac6fa521}} 
+\index{Chess\+Board@{Chess\+Board}!get\+Flat\+Pices\+Value@{get\+Flat\+Pices\+Value}}
+\index{get\+Flat\+Pices\+Value@{get\+Flat\+Pices\+Value}!Chess\+Board@{Chess\+Board}}
+\subsubsection{\texorpdfstring{get\+Flat\+Pices\+Value()}{getFlatPicesValue()}}
+{\footnotesize\ttfamily int Chess\+Board\+::get\+Flat\+Pices\+Value (\begin{DoxyParamCaption}\item[{Pices\+Flat\+Data\+List}]{flats,  }\item[{chess\+Pices\+Status}]{status }\end{DoxyParamCaption})}
+
+
+
+Return group(flat data)\textquotesingle{}s value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flats} & \\
+\hline
+{\em status} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_chess_board_a8208e18ec3b29a039ffe45249d4d9e53}\label{class_chess_board_a8208e18ec3b29a039ffe45249d4d9e53}} 
+\index{Chess\+Board@{Chess\+Board}!get\+Pos\+Value@{get\+Pos\+Value}}
+\index{get\+Pos\+Value@{get\+Pos\+Value}!Chess\+Board@{Chess\+Board}}
+\subsubsection{\texorpdfstring{get\+Pos\+Value()}{getPosValue()}}
+{\footnotesize\ttfamily int Chess\+Board\+::get\+Pos\+Value (\begin{DoxyParamCaption}\item[{int}]{board\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}\mbox{[}4\mbox{]},  }\item[{\hyperlink{struct_pices_pos}{Pices\+Pos} $\ast$}]{pos,  }\item[{chess\+Pices\+Status}]{side }\end{DoxyParamCaption})}
+
+
+
+Return position\textquotesingle{}s value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}} & \\
+\hline
+{\em pos} & \\
+\hline
+{\em side} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_chess_board_aae32c08142508998bedeb0907f35e62f}\label{class_chess_board_aae32c08142508998bedeb0907f35e62f}} 
+\index{Chess\+Board@{Chess\+Board}!get\+Side\+Score@{get\+Side\+Score}}
+\index{get\+Side\+Score@{get\+Side\+Score}!Chess\+Board@{Chess\+Board}}
+\subsubsection{\texorpdfstring{get\+Side\+Score()}{getSideScore()}}
+{\footnotesize\ttfamily int Chess\+Board\+::get\+Side\+Score (\begin{DoxyParamCaption}\item[{int}]{board\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}\mbox{[}4\mbox{]},  }\item[{chess\+Pices\+Status}]{side }\end{DoxyParamCaption})}
+
+
+
+Return side\textquotesingle{}s globe score. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}} & \\
+\hline
+{\em side} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_chess_board_afe130ad0f67ced921f9dacf14176cb78}\label{class_chess_board_afe130ad0f67ced921f9dacf14176cb78}} 
+\index{Chess\+Board@{Chess\+Board}!insert\+Pices@{insert\+Pices}}
+\index{insert\+Pices@{insert\+Pices}!Chess\+Board@{Chess\+Board}}
+\subsubsection{\texorpdfstring{insert\+Pices()}{insertPices()}}
+{\footnotesize\ttfamily bool Chess\+Board\+::insert\+Pices (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{type }\end{DoxyParamCaption})}
+
+
+
+Insert a pices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em type} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pos is a valid pos or not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_chess_board_abf92d3ef0baf837f8a15b8746d4e44cc}\label{class_chess_board_abf92d3ef0baf837f8a15b8746d4e44cc}} 
+\index{Chess\+Board@{Chess\+Board}!is\+Win@{is\+Win}}
+\index{is\+Win@{is\+Win}!Chess\+Board@{Chess\+Board}}
+\subsubsection{\texorpdfstring{is\+Win()}{isWin()}}
+{\footnotesize\ttfamily int Chess\+Board\+::is\+Win (\begin{DoxyParamCaption}\item[{int}]{board\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}\mbox{[}4\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Return is anyone win. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_chess_board_ae623e32e472e4bb21198707b9b22213f}\label{class_chess_board_ae623e32e472e4bb21198707b9b22213f}} 
+\index{Chess\+Board@{Chess\+Board}!takeback@{takeback}}
+\index{takeback@{takeback}!Chess\+Board@{Chess\+Board}}
+\subsubsection{\texorpdfstring{takeback()}{takeback()}}
+{\footnotesize\ttfamily Pices\+Pos\+List Chess\+Board\+::takeback (\begin{DoxyParamCaption}\item[{int}]{board\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}\mbox{[}4\mbox{]},  }\item[{int}]{step }\end{DoxyParamCaption})}
+
+
+
+Take back. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}} & \\
+\hline
+{\em step} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pices\+Pos\+List 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_chess_board_a5d8e4b1cbd87ef1dd7bac6de42e375ff}\label{class_chess_board_a5d8e4b1cbd87ef1dd7bac6de42e375ff}} 
+\index{Chess\+Board@{Chess\+Board}!black\+Target\+Pos@{black\+Target\+Pos}}
+\index{black\+Target\+Pos@{black\+Target\+Pos}!Chess\+Board@{Chess\+Board}}
+\subsubsection{\texorpdfstring{black\+Target\+Pos}{blackTargetPos}}
+{\footnotesize\ttfamily \hyperlink{struct_pices_pos}{Pices\+Pos} Chess\+Board\+::black\+Target\+Pos}
+
+Pridect black pices target pos \mbox{\Hypertarget{class_chess_board_ab58be444056dbb531b3b2535b4054b54}\label{class_chess_board_ab58be444056dbb531b3b2535b4054b54}} 
+\index{Chess\+Board@{Chess\+Board}!chess\+Board@{chess\+Board}}
+\index{chess\+Board@{chess\+Board}!Chess\+Board@{Chess\+Board}}
+\subsubsection{\texorpdfstring{chess\+Board}{chessBoard}}
+{\footnotesize\ttfamily int Chess\+Board\+::chess\+Board\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}}
+
+Chess Board x,y,z \mbox{\Hypertarget{class_chess_board_af130ebe77300106c1a79a8fd54600cd2}\label{class_chess_board_af130ebe77300106c1a79a8fd54600cd2}} 
+\index{Chess\+Board@{Chess\+Board}!target\+Pos@{target\+Pos}}
+\index{target\+Pos@{target\+Pos}!Chess\+Board@{Chess\+Board}}
+\subsubsection{\texorpdfstring{target\+Pos}{targetPos}}
+{\footnotesize\ttfamily \hyperlink{struct_pices_pos}{Pices\+Pos} Chess\+Board\+::target\+Pos}
+
+Result pos, this result is after compire between attach or defence \mbox{\Hypertarget{class_chess_board_aa03bcc987457e608a908809663085302}\label{class_chess_board_aa03bcc987457e608a908809663085302}} 
+\index{Chess\+Board@{Chess\+Board}!white\+Target\+Pos@{white\+Target\+Pos}}
+\index{white\+Target\+Pos@{white\+Target\+Pos}!Chess\+Board@{Chess\+Board}}
+\subsubsection{\texorpdfstring{white\+Target\+Pos}{whiteTargetPos}}
+{\footnotesize\ttfamily \hyperlink{struct_pices_pos}{Pices\+Pos} Chess\+Board\+::white\+Target\+Pos}
+
+Pridect white pices target pos 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+chessboard.\+h\item 
+chessboard.\+cpp\end{DoxyCompactItemize}
